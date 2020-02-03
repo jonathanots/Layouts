@@ -51,7 +51,6 @@ flutter:
   assets:
     - assets/images/adoption/adoption_pet.jpg
     - assets/images/adoption/panda.png
-    - assets/images/adoption/pandinha.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
