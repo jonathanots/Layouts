@@ -50,7 +50,7 @@ class _DetailsPetPageState extends State<DetailsPetPage> {
                           child: Hero(
                             tag: "hero_${widget.index}",
                             child: Image.asset(
-                              "assets/images/panda.png",
+                              "assets/images/adoption/panda.png",
                               fit: BoxFit.cover,
                             ),
                           ),

@@ -47,7 +47,9 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            _iten(asset: "assets/images/adoption_pet.jpg", route: "/adoption/"),
+            _iten(
+                asset: "assets/images/adoption/adoption_pet.jpg",
+                route: "/adoption/"),
           ],
         ),
       ),

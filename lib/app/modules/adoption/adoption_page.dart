@@ -4,7 +4,6 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:layouts/app/modules/adoption/adoption_controller.dart';
 import 'package:layouts/app/modules/adoption/pages/details_pet_page.dart';
-import 'package:mobx/mobx.dart';
 
 import 'models/animal_model.dart';
 
@@ -235,12 +234,12 @@ class _AdoptionPageState extends State<AdoptionPage> {
                         bottom: 48,
                         left: 10,
                         child: Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.38,
+                          height: 210,
+                          width: MediaQuery.of(context).size.width * 0.40,
                           child: Hero(
                             tag: "hero_$index",
                             child: Image.asset(
-                              "assets/images/panda.png",
+                              "assets/images/adoption/panda.png",
                               fit: BoxFit.cover,
                             ),
                           ),
