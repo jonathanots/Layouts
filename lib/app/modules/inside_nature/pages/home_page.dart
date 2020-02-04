@@ -192,11 +192,14 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.grey.shade200,
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              "assets/images/inside_nature/flower2.png"))),
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.grey.shade200,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/inside_nature/flower2.png"),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                   child: Stack(
                                     children: <Widget>[
                                       Align(
@@ -304,62 +307,81 @@ class _HomePageState extends State<HomePage> {
                         return Container(
                           height: 100,
                           width: size.width,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 15),
+                          padding: EdgeInsets.symmetric(horizontal: 20),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Stack(
                             children: <Widget>[
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    width: 75,
-                                    decoration: BoxDecoration(
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      width: 75,
+                                      decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(10),
                                         color: Colors.grey.shade200,
                                         image: DecorationImage(
-                                            image: AssetImage(
-                                                "assets/images/inside_nature/flower2.png"))),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        "${models[index].name}",
-                                        style: TextStyle(
-                                          color: Colors.grey[400],
+                                          image: AssetImage(
+                                            "assets/images/inside_nature/flower2.png",
+                                          ),
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        "\$${models[index].price}",
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          "${models[index].name}",
+                                          style: TextStyle(
+                                            color: Colors.grey[400],
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  )
-                                ],
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          "\$${models[index].price}",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 17,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
-                              Align(
-                                alignment: Alignment.topRight,
-                                child: IconButton(
-                                  splashColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  icon: Text("${models[index].discount}"),
-                                  onPressed: () =>
-                                      controller.changeLike(index: index),
+                              Positioned(
+                                top: 10,
+                                right: 0,
+                                child: Container(
+                                  height: 30,
+                                  width: 40,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: Colors.grey[200],
+                                  ),
+                                  child: Text(
+                                    "-${models[index].discount}\%",
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
                                 ),
                               )
                             ],
