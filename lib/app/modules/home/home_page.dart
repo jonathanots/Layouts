@@ -50,6 +50,9 @@ class _HomePageState extends State<HomePage> {
             _iten(
                 asset: "assets/images/adoption/adoption_pet.jpg",
                 route: "/adoption/"),
+            _iten(
+                asset: "assets/images/inside_nature/flower1.png",
+                route: "/inside_nature/"),
           ],
         ),
       ),

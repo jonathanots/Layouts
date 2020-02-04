@@ -37,8 +37,8 @@ class _AdoptionPageState extends State<AdoptionPage> {
         child: TextField(
           cursorColor: Color(0xff2f6162),
           decoration: InputDecoration(
-            labelText: "Search pet to adopt",
-            labelStyle: TextStyle(
+            hintText: "Search pet to adopt",
+            hintStyle: TextStyle(
               color: Color(0xffa6a6a6),
             ),
             prefixIcon: Icon(
